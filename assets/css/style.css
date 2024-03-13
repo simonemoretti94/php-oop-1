@@ -1,0 +1,13 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header {
+    background-color: #2c1a4d;
+    background: linear-gradient(180deg, #2c1a4d, #3c2d58, #2c1a4d);
+}
+
+main {
+    min-height: calc(110vh - 110px);
+    background-color: #9eeaf9;
+}
