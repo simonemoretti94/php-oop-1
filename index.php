@@ -10,6 +10,16 @@
         '<br><br>'; ?>
         <?php var_dump($movies) ?>
 
+        <div class="row">
+            <?php foreach ($movies as $key => $element) : ?>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex flex-column">
+                    <!-- <?php $element; ?> doesn't works -->
+                </div>
+
+            <?php endforeach; ?>
+        </div>
+
     </div>
 </main>
 
