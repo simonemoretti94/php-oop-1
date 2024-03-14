@@ -5,6 +5,7 @@ require_once __DIR__ . '/models/classGenre.php';
 
 
 //genres
+//$first_genre = new MovieGenre('Action', 'Sci-Fi', 'Thriller');
 $first_genre = new MovieGenre('Action', 'Sci-Fi', 'Thriller');
 
 //movies
