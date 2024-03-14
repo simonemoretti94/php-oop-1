@@ -12,3 +12,15 @@ class MovieGenre
         $this->genre3 = $genre3;
     }
 }
+
+/*
+class MovieGenre
+{
+    public $genres;
+
+    function __construct()
+    {
+        $this->genres = func_get_args();
+    }
+}
+*/

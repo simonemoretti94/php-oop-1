@@ -17,11 +17,11 @@
                             echo "<p class='ms-1 border border-1 rounded-2 p-1'>" . $genre . "</p>";
                         } ?>
                         <?php echo '</div>' ?>
-                        <p>Adulti: <span><?php echo ($movie->adult ? 'Sì' : 'No') ?></span></p>
-                        <p>Lingua originale: <span> <?php echo $movie->original_language ?></span></p>
-                        <p>Titolo originale: <span><?php echo $movie->original_title ?></span></p>
-                        <p>Voto medio:<span><?php echo round($movie->vote_average) ?></span> </p>
-                        <p>Età minima consentita: <span><?php echo $movie->min_age_allowed ?></span></p>
+                        <p id="p_hover">Adulti: <span><?php echo ($movie->adult ? 'Sì' : 'No') ?></span></p>
+                        <p id="p_hover">Lingua originale: <span> <?php echo $movie->original_language ?></span></p>
+                        <p id="p_hover">Titolo originale: <span><?php echo $movie->original_title ?></span></p>
+                        <p id="p_hover">Voto medio:<span><?php echo round($movie->vote_average) ?></span> </p>
+                        <p id="p_hover">Età minima consentita: <span><?php echo $movie->min_age_allowed ?></span></p>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -45,6 +45,7 @@
     }
 
     #card {
+        position: relative;
         margin-top: 1rem;
         padding: 1rem 1rem 1rem 0;
         display: flex;
@@ -55,7 +56,8 @@
         border: solid .5px black;
         border-radius: 8px;
 
-        & p {
+        & #p_hover {
+            position: relative;
             color: white;
             margin-left: 1.5rem;
             font-size: medium;
@@ -63,11 +65,42 @@
             border-bottom: solid .25px white;
 
             >span {
+                color: white;
                 margin-left: .5rem;
                 font-size: small;
             }
         }
+
+        #p_hover {
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 1s ease-in-out;
+        }
+
+        #p_hover:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: blue;
+            visibility: hidden;
+            transition: all 1.5s ease-in-out;
+        }
+
+        #p_hover:hover:before {
+            visibility: visible;
+            width: 100%;
+        }
+
+        #p_hover:hover {
+            border-bottom: 2px solid blue;
+        }
+
+
     }
+
+    /* card bracket */
 </style>
 
 

@@ -15,7 +15,9 @@ class Movie
         foreach ($genre as $key => $element) {
             $this->genre[$key] = $element;
         };
-        //$this->genre = $genre;
+
+
+        $this->genre = $genre;
         $this->adult = $adult;
         $this->original_language = $original_language;
         $this->original_title = $original_title;
