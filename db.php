@@ -10,9 +10,7 @@ $first_genre = new MovieGenre('Action', 'Sci-Fi', 'Thriller');
 
 //movies
 $first_movie = new Movie($first_genre, true, 'en', 'Matrix reloaded', 6.75, 18);
-
 $second_movie = new Movie($first_genre, false, 'ja', 'Psycho-pass', 8.23, 16);
-
 $third_movie = new Movie($first_genre, false, 'en', 'Megamind vs. the Doom Syndicate', 5.594, 16);
 $fourth_movie = new Movie($first_genre, true, 'en', 'The Accursed', 5.971, 18);
 $fifth_movie = new Movie($first_genre, true, 'en', 'The Masked Saint', 4.5, 18);
