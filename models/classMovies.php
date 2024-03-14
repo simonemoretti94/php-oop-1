@@ -2,7 +2,7 @@
 
 class Movie
 {
-    public $genre;
+    public $genre = [];
     public $adult;
     public $original_language;
     public $original_title;
@@ -12,7 +12,10 @@ class Movie
 
     public function __construct($genre, $adult, $original_language, $original_title, $vote_average, $min_age_allowed)
     {
-        $this->genre = $genre;
+        foreach ($genre as $key => $element) {
+            $this->genre[$key] = $element;
+        };
+        //$this->genre = $genre;
         $this->adult = $adult;
         $this->original_language = $original_language;
         $this->original_title = $original_title;
