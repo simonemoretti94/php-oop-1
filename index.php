@@ -1,3 +1,5 @@
+<?php $head = 'index'; ?>
+
 <?php include_once __DIR__ . '/parts/header.php' ?>
 
 <main>

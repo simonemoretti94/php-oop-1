@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <script src="./assets/js/script.js" rel="script" defer></script>
 
-    <title>header</title>
+    <title><?php echo $head ?></title>
 </head>
 <header>
     <h1>PHP-oop-1</h1>
