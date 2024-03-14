@@ -4,14 +4,16 @@
     <div class="container">
         <?php include_once __DIR__ . '/db.php' ?>
 
-        <div class="row justify-content-evenly  ">
+        <div class="row justify-content-start  ">
             <?php foreach ($movies as $movie) : ?>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 d-flex flex-column align-items-center">
-                    <?php echo "<p>Genere: "; ?>
+                <div id="cards" class="col-lg-4 col-md-6 col-sm-12">
+
+                    <?php echo '<div class="col-6 d-flex justify-content-evenly ">' ?>
                     <?php foreach ($movie->genre as  $genre) {
-                        echo $genre . "</p>";
+                        echo "<p class='ms-1'>" . $genre . "</p>";
                     } ?>
+                    <?php echo '</div>' ?>
                     <p>Adulti: <?php echo ($movie->adult ? 'Sì' : 'No') ?></p>
                     <p>Lingua originale: <?php echo $movie->original_language ?></p>
                     <p>Titolo originale: <?php echo $movie->original_title ?></p>
@@ -32,6 +34,25 @@
             <?php endforeach; ?>
         </div>
 </main>
+
+<style>
+    #cards {
+        margin-top: 1rem;
+        padding: 1rem 1rem 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        background: linear-gradient(45deg, rgb(26, 26, 26), black);
+        border: solid .5px black;
+        border-radius: 8px;
+
+        & p {
+            color: white;
+            margin-left: 1.5rem;
+        }
+    }
+</style>
 
 
 <?php include_once __DIR__ . '/parts/footer.php' ?>
