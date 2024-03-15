@@ -9,5 +9,6 @@ header {
 
 main {
     min-height: calc(110vh - 110px);
-    background-color: #9eeaf9;
+    background-color: #9eeaf9af;
+    box-shadow: 0 0 1.5px rgba(0, 0, 255, 0.69);
 }

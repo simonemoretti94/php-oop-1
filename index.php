@@ -17,7 +17,7 @@
                         </small>
                         <?php echo '<div class="col-12 d-flex justify-content-start ms-3">' ?>
                         <?php foreach ($movie->genre as  $genre) {
-                            echo "<p class='ms-1 border border-1 rounded-2 p-1 text-white'>" . $genre . "</p>";
+                            echo "<p class='ms-1 border border-1 rounded-2 p-1 text-white p_genre'>" . $genre . "</p>";
                         } ?>
                         <?php echo '</div>' ?>
                         <p id="p_hover">Adulti: <span><?php echo ($movie->adult ? 'Sì' : 'No') ?></span></p>
@@ -47,6 +47,12 @@
         padding: auto 1rem;
     }
 
+
+    .p_genre:hover {
+        background-color: rgba(198, 23, 23, 0.79);
+        transform: scale(.9);
+    }
+
     #card {
         position: relative;
         margin-top: 1rem;
@@ -58,12 +64,15 @@
         background: linear-gradient(45deg, rgb(26, 26, 26), black);
         border: solid .5px black;
         border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 255, 0.69);
+        filter: drop-shadow(0 0 2px blue);
 
         & #p_hover {
             position: relative;
             color: white;
             margin-left: 1.5rem;
             font-size: medium;
+            font-weight: 300;
 
             border-bottom: solid .25px white;
 
@@ -101,6 +110,10 @@
         }
 
 
+    }
+
+    #card:hover {
+        transform: scale(.99);
     }
 
     /* card bracket */
