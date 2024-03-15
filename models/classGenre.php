@@ -1,4 +1,15 @@
 <?php
+
+/**
+ * Class MovieGenre
+ *
+ * This class represents a movie genre with various properties.
+ *
+ * @property string $madein The continent where the movie is made.
+ * @property string $genre1 The first genre of the movie.
+ * @property string $genre2 The second genre of the movie.
+ * @property string $genre3 The third genre of the movie.
+ */
 class MovieGenre
 {
     public static string $madein = 'Continent: ';
@@ -13,15 +24,3 @@ class MovieGenre
         $this->genre3 = $genre3;
     }
 }
-
-/*
-class MovieGenre
-{
-    public $genres;
-
-    function __construct()
-    {
-        $this->genres = func_get_args();
-    }
-}
-*/

@@ -1,5 +1,18 @@
 <?php
 
+/**
+ * Class Movie
+ *
+ * This class represents a movie with various properties and methods.
+ *
+ * @property string $continent The continent where the movie is available.
+ * @property array $genre The genres of the movie.
+ * @property bool $adult Whether the movie is for adults.
+ * @property string $original_language The original language of the movie.
+ * @property string $original_title The original title of the movie.
+ * @property float $vote_average The average vote of the movie.
+ * @property int $min_age_allowed The minimum age allowed to watch the movie.
+ */
 class Movie
 {
     public static string $continent = 'Worldwide';
@@ -31,8 +44,10 @@ class Movie
     }
 
     /**
-     * @param int user age
-     * @return string if user is allowed to watch the movie
+     * Verifies the age of the user
+     *
+     * @param int $age The age of the user.
+     * @return string Whether the user is allowed to watch the movie.
      */
     function ageVerifier($age)
     {
@@ -44,7 +59,9 @@ class Movie
     }
 
     /**
-     * @return int rounded number to zero decimals
+     * Rounds the vote average of the movie
+     *
+     * @return int The rounded vote average of the movie.
      */
     function voteRounded()
     {
