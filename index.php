@@ -13,7 +13,7 @@
 
                     <div id="card">
                         <small class="ms-1 mb-1 text-primary">
-                            <?= Movie::returnCountry(); ?>
+                            <?= MovieGenre::$madein .  Movie::returnCountry(); ?>
                         </small>
                         <?php echo '<div class="col-12 d-flex justify-content-start ms-3">' ?>
                         <?php foreach ($movie->genre as  $genre) {

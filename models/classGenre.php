@@ -1,6 +1,8 @@
 <?php
 class MovieGenre
 {
+    public static string $madein = 'Continent: ';
+
     function __construct(
         public string $genre1,
         public string $genre2,

@@ -2,13 +2,13 @@
 
 class Movie
 {
-    public static string $country = 'Belgium';
+    public static string $continent = 'Worldwide';
 
     public $genre = [];
 
     public static function returnCountry()
     {
-        return self::$country;
+        return self::$continent;
     }
     public function __construct(
         $genre,
