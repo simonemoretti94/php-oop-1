@@ -17,24 +17,20 @@ class Movie
 {
     public static string $continent = 'Worldwide';
 
-    public $genre = [];
+    public $genre;
 
     public static function returnCountry()
     {
         return self::$continent;
     }
     public function __construct(
-        $genre,
+        MovieGenre $genre,
         public bool $adult,
         public string $original_language,
         public string $original_title,
         public float $vote_average,
         public int $min_age_allowed
     ) {
-        foreach ($genre as $key => $element) {
-            $this->genre[$key] = $element;
-        };
-
         $this->genre = $genre;
         $this->adult = $adult;
         $this->original_language = $original_language;
