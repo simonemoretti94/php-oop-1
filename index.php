@@ -12,9 +12,12 @@
                 <div id="cards" class="col-lg-4 col-md-4 col-sm-12">
 
                     <div id="card">
+                        <small class="ms-1 mb-1 text-primary">
+                            <?= Movie::returnCountry(); ?>
+                        </small>
                         <?php echo '<div class="col-12 d-flex justify-content-start ms-3">' ?>
                         <?php foreach ($movie->genre as  $genre) {
-                            echo "<p class='ms-1 border border-1 rounded-2 p-1'>" . $genre . "</p>";
+                            echo "<p class='ms-1 border border-1 rounded-2 p-1 text-white'>" . $genre . "</p>";
                         } ?>
                         <?php echo '</div>' ?>
                         <p id="p_hover">Adulti: <span><?php echo ($movie->adult ? 'Sì' : 'No') ?></span></p>

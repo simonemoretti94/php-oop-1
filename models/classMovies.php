@@ -2,20 +2,25 @@
 
 class Movie
 {
+    public static string $country = 'Belgium';
+
     public $genre = [];
-    public $adult;
-    public $original_language;
-    public $original_title;
-    public $vote_average;
 
-    public $min_age_allowed;
-
-    public function __construct($genre, $adult, $original_language, $original_title, $vote_average, $min_age_allowed)
+    public static function returnCountry()
     {
+        return self::$country;
+    }
+    public function __construct(
+        $genre,
+        public bool $adult,
+        public string $original_language,
+        public string $original_title,
+        public float $vote_average,
+        public int $min_age_allowed
+    ) {
         foreach ($genre as $key => $element) {
             $this->genre[$key] = $element;
         };
-
 
         $this->genre = $genre;
         $this->adult = $adult;
