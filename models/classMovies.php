@@ -15,16 +15,15 @@
  */
 class Movie
 {
+    public static string $madein = 'Continent: ';
     public static string $continent = 'Worldwide';
-
-    public $genre;
 
     public static function returnCountry()
     {
         return self::$continent;
     }
     public function __construct(
-        MovieGenre $genre,
+        public array $genre,
         public bool $adult,
         public string $original_language,
         public string $original_title,

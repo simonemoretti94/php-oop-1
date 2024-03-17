@@ -13,11 +13,11 @@
 
                     <div id="card">
                         <small class="ms-1 mb-1 text-primary">
-                            <?= MovieGenre::$madein .  Movie::returnCountry(); ?>
+                            <?= Movie::$madein .  Movie::returnCountry(); ?>
                         </small>
-                        <?php echo '<div class="col-12 d-flex justify-content-start ms-3">' ?>
+                        <?php echo '<div class="col-12 row d-flex justify-content-evenly ms-3 p-1">' ?>
                         <?php foreach ($movie->genre as  $genre) {
-                            echo "<p class='ms-1 border border-1 rounded-2 p-1 text-white p_genre'>" . $genre . "</p>";
+                            echo "<p class='col-lg-3 col-md-6 col-sm-12 border border-1 rounded-2 p-1 text-white text-center  p_genre'>" . $genre . "</p>";
                         } ?>
                         <?php echo '</div>' ?>
                         <p id="p_hover">Adulti: <span><?php echo ($movie->adult ? 'Sì' : 'No') ?></span></p>
